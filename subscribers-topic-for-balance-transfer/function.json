@@ -1,0 +1,14 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "vourity-topic-balanceaccount-transactions-for-clearing-transaction",
+      "subscriptionName": "VourityFunctionVoucherBalanceAccountTransactions",
+      "isSessionsEnabled": true,
+      "connection": "AZURE_BUS_CONNECTION_STRING"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+	 "_id": "abef8591-a075-4d70-b61c-d0c187f694e6",
+	 "docType": "voucherLink",
+	 "partitionKey": "5e47a2ec-1d10-457a-adf3-13e6f683925b",
+	 "voucherLinkType": "rfid,licenseplate,qr",
+	 "linkedID": "c240dd0b1a9b00c2478ab95f2184c81d0f3f923a751c71e61af36bb34fe9f240399ca3af2f061cbc1da2535ce93f6bcedead90cad16f14346cd34f394ee02f5e",
+	 "linkedIDName": "This is my car",
+	 "voucherID": "e845922e-6dd5-494c-b539-9325fdff937e",
+	 "voucherToken": "da051e17-d56f-4b6d-93a5-9b0f10d6d99e",
+	 "passToken": "1325afd1f241bca62122e7e9a1e59b2d1083492f1ca7685de8f3ca7316f756163fe66dc682cdd6a5441aeef494fc4f0583a973617d51b2a26a764342c32e9f67",
+	 "createdDate": "2019-10-16T14:05:36Z",
+	 "updatedDate": "2019-10-16T15:18:12Z"
+}

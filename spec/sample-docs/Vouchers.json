@@ -1,0 +1,249 @@
+{
+	 "_id": "1bb58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "docType": "vouchers",
+	 "partitionKey": "1bb58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "passToken": "$2a$05$4zfb41hRVgMURdvMjmhLze7Wmls7XsPsLuzhYl6wjQ/r77F2daPS6",
+	 "voucherToken": "e845922e-6dd5-494c-b539-9325fdff937e",
+	 "voucherTitle": "The title of the Voucher, from product name",
+	 "voucherDescription": "Some description of the Voucher, from product description",
+	 "isRedeemed": false,
+	 "isExpired": false,
+	 "isCanceled": false,
+	 "redemptionCounter": 0,
+	 "issuer": {
+		 "merchantID": "618bd6b3-b6b0-4984-b615-a8643c0f19c2",
+		 "merchantName": "Vasamuseet",
+		 "balanceAccountID": "474b917c-9971-4ec4-89b5-0ab80f2607ae"
+	},
+	 "productID": "d925922e-6dd5-494c-b539-9325fdff937e",
+	 "isBundleChild": false,
+	 "orderID": "2d3b022d-0911-43e8-a8b0-398ae950d981",
+	 "orderDate": "2017-10-16T14:05:36Z",
+	 "salesPrice": 123456789.00,
+	 "vatPercent": 25.00,
+	 "vatAmount": 100.56,
+	 "currency": "SEK",
+	 "vatClass": "VAT1",
+	 "productClass": "salesSPV",
+	 "productClassName": "Sales Single Purpose Voucher",
+	 "balanceAccountType": "voucher,cashcard,cashpool",
+	 "balanceAccountID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+	 "isTopupAllowed": false,
+	 "isRefundAllowed": true,
+	 "feeIsPaidBy": "issuer,collector,voucher",
+	 "isMultiFunctionVoucher": false,
+	 "settlementList": {
+		 "settlementCurrency": "EUR",
+		 "totalSettlementAmount": 123456.00,
+		 "totalSettlementAmountLeft": 1234567.00,
+		 "settleFullAmountOnFirstRedemption": false,
+		 "settleValueOnRedemption": "fullonfirstredemption,redeemedvalue,evensplit,fixedamount",
+		 "settlementAmountPerRedemption": 123456789.00,
+		 "settlementTransactions": [
+			{
+				 "settlementTransactionID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+				 "merchantID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+				 "merchantName": "Parks and Resorts",
+				 "merchantType": "collector",
+				 "settlementStatus": "pending,successful,failed",
+				 "settlementAmount": 123456.00,
+				 "productClass": "salesSPV",
+				 "productClassName": "Sales Single Purpose Voucher",
+				 "vatPercent": 25.00,
+				 "vatAmount": 100.56,
+				 "currency": "SEK",
+				 "vatClass": "VAT1",
+				 "isMultiFunctionVoucher": false,
+				 "trigger": "expiredVoucher",
+				 "fromBalanceAccountID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+				 "toBalanceAccountID": "22358cfa-063d-4f5c-be5d-b90cfb64d1d6"
+			},
+			{
+				 "settlementTransactionID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+				 "merchantID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+				 "merchantName": "Tourist Shop",
+				 "merchantType": "reseller",
+				 "settlementStatus": "pending,successful,failed",
+				 "settlementAmount": 123456.00,
+				 "productClass": "salesSPV",
+				 "productClassName": "Sales Single Purpose Voucher",
+				 "vatPercent": 25.00,
+				 "vatAmount": 100.56,
+				 "currency": "SEK",
+				 "vatClass": "VAT1",
+				 "isMultiFunctionVoucher": false,
+				 "trigger": "resellerComission",
+				 "fromBalanceAccountID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+				 "toBalanceAccountID": "22358cfa-063d-4f5c-be5d-b90cfb64d1d6"
+			},
+			{
+				 "settlementTransactionID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+				 "merchantID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+				 "merchantName": "Vourity AB",
+				 "merchantType": "vourity",
+				 "settlementStatus": "pending,successful,failed",
+				 "settlementAmount": 123456.00,
+				 "productClass": "salesSPV",
+				 "productClassName": "Sales Single Purpose Voucher",
+				 "vatPercent": 25.00,
+				 "vatAmount": 100.56,
+				 "currency": "SEK",
+				 "vatClass": "VAT1",
+				 "isMultiFunctionVoucher": false,
+				 "trigger": "serviceFee",
+				 "fromBalanceAccountID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+				 "toBalanceAccountID": "22358cfa-063d-4f5c-be5d-b90cfb64d1d6"
+			}
+		]
+	},
+	 "collectorLimitationsMerchants": [
+		{
+			 "merchantID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "merchantName": "Parks and Resorts",
+			 "balanceAccountID": "474b917c-9971-4ec4-89b5-0ab80f2607ae"
+		}
+	],
+	 "collectorLimitationsBusinessUnits": [
+		{
+			 "businessUnitID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "businessUnitName": "Seven Eleven 123"
+		},
+		{
+			 "businessUnitID": "574b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "businessUnitName": "Pressbyrån"
+		}
+	],
+	 "collectorLimitationsPointOfService": [
+		{
+			 "pointOfServiceID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "pointOfServiceName": "Seven Eleven 123"
+		},
+		{
+			 "pointOfServiceID": "574b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "pointOfServiceName": "Pressbyrån"
+		}
+	],
+	 "collectorLimitationsPartnerNetworks": [
+		{
+			 "partnerNetworkID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "partnerNetworkName": "Seven Eleven 123"
+		},
+		{
+			 "partnerNetworkID": "574b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "partnerNetworkName": "Pressbyrån"
+		}
+	],
+	 "posProductLimitations": [
+		{
+			 "posProductSKU": "ABC1234567-89",
+			 "posProductEAN": "1234567890ADFFF",
+			 "productGCN": "1234567890ADFFF234324",
+			 "posProductName": "The blue product",
+			 "posProductDescription": "Description of the product"
+		}
+	],
+	 "redemptionRules": {
+		 "redemptionCodeIsRequired": false,
+		 "salesPersonCodeIsRequired": true,
+		 "redemptionCodes": [
+			"$2a$05$4zfb41hRVgMURdvMjmhLze7Wmls7XsPsLuzhYl6wjQ/r77F2daPS6"
+		]
+	},
+	 "voucherValue": {
+		 "valueType": "monetary,discount,exchange",
+		 "spend": 1,
+		 "redemptionsTotal": 1,
+		 "redemptionsLeft": 1,
+		 "fixedAmount": 123456789.00,
+		 "currency": "SEK",
+		 "ratioPercent": 25.00
+	},
+	 "validPeriod": {
+		 "validFromDate": "2017-10-16T00:00:00Z",
+		 "validToDate": "2017-10-16T23:59:59Z",
+		 "validDaysOfWeek": "Mo,Tu,We,Th,Fr,Sa,Su",
+		 "validFromTime": "08:00:00",
+		 "validToTime": "14:00:00",
+		 "validDaysAfterOrder": 90,
+		 "validDaysAfterFirstRedemption": 30
+	},
+	 "conditions": "Some text about special conditions in text about how to use the voucher",
+	 "campaignCode": "Some magic - code 1234",
+	 "imageURL": "http://media.vourity.com/logoburger.png",
+	 "isLocked": false,
+	 "voucherPinCode": "$2a$05$4zfb41hRVgMURdvMjmhLze7Wmls7XsPsLuzhYl6wjQ/r77F2daPS6",
+	 "voucherSequenceNumber": 123456788,
+	 "priceLookupCode": 12345,
+	 "location": {
+		 "streetRow1": "Mega street 5",
+		 "streetRow2": "Mega street 5",
+		 "zip": "12233JJHH",
+		 "city": "Stockholm",
+		 "state": "NYC",
+		 "country": "Sweden",
+		 "countryCode": "SE",
+		 "latitude": 59.123456789,
+		 "longitude": -18.123456789,
+		 "locationDescription": "You find the door next to the yellow building. Go to the back side and show your Voucher"
+	},
+	 "reseller": {
+		 "merchantID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+		 "merchantName": "Turistbutiken i Åre",
+		 "resellerCommissionAmount": 18.50,
+		 "resellerCommissionPercent": 5.00,
+		 "productClass": "ResellerCommissions",
+		 "productClassName": "Reseller commissions",
+		 "currency": "SEK",
+		 "vatClass": "SEVAT1",
+		 "vatPercent": 25,
+		 "balanceAccountID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+		 "balanceAccountName": "My account",
+		 "isResellerCommissionClearingDone": false
+	},
+	 "merchantVourity": {
+		 "merchantID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+		 "merchantName": "Vourity AB",
+		 "currency": "SEK",
+		 "balanceAccountID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+		 "balanceAccountName": "My account"
+	},
+	 "serviceFee": {
+		 "feePerTransactionPercent": 4.75,
+		 "feePerTransactionAmount": 2.01,
+		 "feeCurrency": "SEK",
+		 "productClass": "ResellerCommissions",
+		 "productClassName": "Reseller commissions",
+		 "vatClass": "SEVAT1",
+		 "vatPercent": 25
+	},
+	 "notificationSubscribers": [
+		{
+			 "walletID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "events": "redemption"
+		},
+		{
+			 "walletID": "574b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "events": "all"
+		}
+	],
+	 "expiredVoucherSettlementRules": [
+		{
+			 "merchantID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "merchantName": "Turistbutiken i Åre",
+			 "expiredValuePercent": 40,
+			 "balanceAccountID": "789b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "balanceAccountName": "My account 1"
+		},
+		{
+			 "merchantID": "585b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "merchantName": "Turistbutiken i Malmö",
+			 "expiredValuePercent": 60,
+			 "balanceAccountID": "678b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "balanceAccountName": "My account 2"
+		}
+	],
+	 "rating": 4.6,
+	 "event": "new",
+	 "createdDate": "2017-10-16T14:05:36Z",
+	 "updatedDate": "2017-10-16T15:18:12Z"
+}

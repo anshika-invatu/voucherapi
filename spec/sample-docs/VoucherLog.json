@@ -1,0 +1,19 @@
+{
+	 "_id": "15958cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "docType": "voucherLog",
+	 "partitionKey": "23458cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "voucherID": "23458cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "voucherName": "Museeum visit",
+	 "actionText": "Voucher created",
+	 "actionCode": "created",
+	 "merchantName": "MerchantName",
+	 "merchantID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "webshopName": "WebshopName",
+	 "webshopID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "result": "All was good",
+	 "notes": "Payout from Vourity",
+	 "statusText": "OK",
+	 "statusCode": "ok",
+	 "createdDate": "2017-10-16T14:05:36Z",
+	 "updatedDate": "2017-10-16T15:18:12Z"
+}

@@ -1,0 +1,13 @@
+{
+  "disabled": false,
+  "bindings": [
+    {
+      "name": "mySbMsg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "topicName": "vourity-topic-voucher-updates",
+      "subscriptionName": "VourityFunctionVoucherUpdates",
+      "connection": "AZURE_BUS_CONNECTION_STRING"
+    }
+  ]
+}

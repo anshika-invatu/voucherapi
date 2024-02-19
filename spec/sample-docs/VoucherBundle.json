@@ -1,0 +1,54 @@
+{
+	 "_id": "92acaca0-005e-4f49-b21b-cd91cfe00d5b",
+	 "docType": "voucherBundle",
+	 "partitionKey": "79e0d0125c52c564041f3974604f867b6c42380ad0b78f133d7758aaccb998d82ec0e084581e13c7453244d8d1bec3e87dc0ebb302bd22f85ffc530bc1c7aa9d",
+	 "redemptionCounter": 0,
+	 "productID": "67bf57ec-6f79-4007-8cc4-26a7a4fba9d1",
+	 "orderID": "8224fcff-abba-4930-861c-65fc12c07902",
+	 "validDaysAfterFirstRedemption": 30,
+	 "issuer": {
+		 "merchantID": "e62b4a05-a5fc-4c5f-9c5d-6f38d0d54dd6",
+		 "merchantName": "Vasamuseet",
+		 "balanceAccountName": "My account",
+		 "balanceAccountID": "75fd9f8b-1b16-4614-ade6-3816fb38d3ef"
+	},
+	 "reseller": {
+		 "merchantID": "11d3afeb-6db9-4d3f-91a4-525881b860bd",
+		 "merchantName": "Merchant 22",
+		 "resellerAmount": 10,
+		 "resellerCommissionAmount": 5,
+		 "resellerCommissionPercent": 5,
+		 "currency": "SEK",
+		 "productClass": "ResellerCommissions",
+		 "productClassName": "Reseller Comissions",
+		 "vatClass": "SEVAT1",
+		 "vatPercent": 25,
+		 "balanceAccountID": "b9e268f5-a776-43ed-b3fe-d2868587e835",
+		 "balanceAccountName": "Balance Account"
+	},
+	 "vouchersInBundle": [
+		{
+			 "voucherID": "e3215d08-7ffd-43d1-9d40-8fe427790b45",
+			 "salesPrice": 25,
+			 "currency": "SEK"
+		},
+		{
+			 "voucherID": "98d29580-3622-4490-a88e-a8d2bc7202c6",
+			 "salesPrice": 50,
+			 "currency": "SEK"
+		}
+	],
+	 "merchantVourity": {
+		 "merchantID": "9e32d3b1-41e5-40ff-bad3-c9ee9f7cdf20",
+		 "merchantName": "Vourity AB",
+		 "currency": "SEK",
+		 "balanceAccountID": "174b917c-9971-4ec4-89b5-0ab80f2607ae",
+		 "balanceAccountName": "My SEK account"
+	},
+	 "bundleSalesPrice": 200,
+	 "vouchersTotalSalesPrice": 75,
+	 "bundleSalesPriceDiffAmount": 125,
+	 "currency": "SEK",
+	 "createdDate": "2019-06-10T06:57:16.993Z",
+	 "updatedDate": "2019-06-10T06:57:16.993Z"
+}

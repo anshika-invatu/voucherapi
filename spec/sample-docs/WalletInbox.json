@@ -1,0 +1,33 @@
+{
+	 "_id": "1bb58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "docType": "walletInbox",
+	 "walletID": "34558cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "inbox": [
+		{
+			 "messageSubject": "You have received a Voucher",
+			 "messageBody": "You have received a Voucher",
+			 "sender": {
+				 "walletID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6",
+				 "merchantID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6",
+				 "userID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6"
+			},
+			 "tags": "announcement",
+			 "messageImageUrl": "https://media.vourity.com/documents/tcv1.png",
+			 "receivedDate": "2017-10-16T14:05:36Z"
+		},
+		{
+			 "messageSubject": "You have received 200 Vourity Credits",
+			 "messageBody": "Happy birthday my dear friend",
+			 "sender": {
+				 "walletID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6",
+				 "merchantID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6",
+				 "userID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6"
+			},
+			 "tags": "money",
+			 "messageImageUrl": "https://media.vourity.com/documents/tcv2.png",
+			 "receivedDate": "2017-10-18T17:05:36Z"
+		}
+	],
+	 "createdDate": "2017-10-16T14:05:36Z",
+	 "updatedDate": "2017-10-16T15:18:12Z"
+}

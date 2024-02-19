@@ -1,0 +1,25 @@
+{
+	 "_id": "1bb58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "docType": "notification",
+	 "notificationType": "email,sms,twitter,push,instagram",
+	 "receiver": {
+		 "walletID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6",
+		 "merchantID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6",
+		 "userID": "45658cfa-063d-4f5c-be5d-b90cfb64d1d6"
+	},
+	 "messageSubject": "The subject field",
+	 "messageBody": "The message body",
+	 "attachments": {
+		 "1": "https://media.vourity.com/file1.pdf",
+		 "2": "https://media.vourity.com/file2.pdf"
+	},
+	 "isSent": true,
+	 "isFailed": false,
+	 "failedReason": "No response from receiver server",
+	 "senderMerchantID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "senderService": "VouchersAPI",
+	 "sendRetryCounter": 1,
+	 "sentDate": "2017-10-16T14:05:36Z",
+	 "createdDate": "2017-10-16T14:05:36Z",
+	 "updatedDate": "2017-10-16T15:18:12Z"
+}

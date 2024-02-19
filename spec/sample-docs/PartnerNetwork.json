@@ -1,0 +1,106 @@
+{
+	"_id": "1bb58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	"docType": "partnerNetworks",
+	"partitionKey": "1bb58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	"ownerMerchantID": "618bd6b3-b6b0-4984-b615-a8643c0f19c2",
+	"ownerMerchantName": "Vasamuseet",
+	"currency": "SEK",
+	"partnerNetworkName": "The blue Partner Network",
+	"partnerNetworkDescription": "Some description of the Partner Network",
+	"isVisible": true,
+	"isEnabledForSale": true,
+	"commissionAmount": 18.50,
+	"commissionPercent": 5.00,
+	"feeMonthlyMembershipAmount": 150,
+	"partnerNetworkMembers": [
+	   {
+			"merchantID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+			"merchantName": "Turistbutiken i Åre",
+			"commissionAmount": 18.50,
+			"commissionPercent": 5.00,
+			"feeMonthlyMembershipAmount": 150,
+			"currency": "SEK",
+			"roles": "admin"
+	   },
+	   {
+			"merchantID": "574b917c-9971-4ec4-89b5-0ab80f2607ae",
+			"merchantName": "Turistbutiken i Malmö",
+			"commissionAmount": 25.00,
+			"commissionPercent": 5.00,
+			"feeMonthlyMembershipAmount": 135,
+			"currency": "SEK",
+			"roles": "member"
+	   }
+   ],
+	"inviteCode": "abc58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	"partnerNetworkInvites": [
+	   {
+			"merchantID": "774b917c-9971-4ec4-89b5-0ab80f2607ae",
+			"merchantName": "Megashop 7",
+			"roles": "member",
+			"inviteExpiryDate": "2019-10-16T14:05:36Z"
+	   },
+	   {
+			"merchantID": "874b917c-9971-4ec4-89b5-0ab80f2607ae",
+			"merchantName": "Museum 8",
+			"roles": "member",
+			"inviteExpiryDate": "2019-10-16T14:05:36Z"
+	   }
+   ],
+	"partnerNetworkRequests": [
+	   {
+			"merchantID": "774b917c-9971-4ec4-89b5-0ab80f2607ae",
+			"merchantName": "Megashop 7",
+			"requestDate": "2019-10-16T14:05:36Z"
+	   },
+	   {
+			"merchantID": "874b917c-9971-4ec4-89b5-0ab80f2607ae",
+			"merchantName": "Museum 8",
+			"requestDate": "2019-10-16T14:05:36Z"
+	   }
+   ],
+	"imageURL": "http://media.vourity.com/logoburger.png",
+	"moreInfoURL": "http://vourity.com/products/nice-car.htm",
+	"products": [
+	   {
+			"productID": "d925922e-6dd5-494c-b539-9325fdff937e",
+			"productName": "The blue product",
+			"productDescription": "Some description of the Product",
+			"conditions": "Some text about special conditions in text about how to use the voucher",
+			"imageURL": "https://media.vourity.com/blueburger.png",
+			"isEnabledForSale": true,
+			"issuer": {
+				"merchantID": "618bd6b3-b6b0-4984-b615-a8643c0f19c2",
+				"merchantName": "Vasamuseet"
+		   },
+			"salesPrice": 123456789.00,
+			"vatPercent": 25.00,
+			"vatAmount": 2.35,
+			"vatClass": "VAT1",
+			"currency": "SEK",
+			"salesPeriodStart": "2017-10-16T00:00:00Z",
+			"salesPeriodEnd": "2017-10-16T00:00:00Z"
+	   },
+	   {
+			"productID": "c825922e-6dd5-494c-b539-9325fdff937e",
+			"productName": "The green product",
+			"productDescription": "Some description of the Product",
+			"conditions": "Some text about special conditions in text about how to use the voucher",
+			"imageURL": "https://media.vourity.com/greenburger.png",
+			"isEnabledForSale": true,
+			"issuer": {
+				"merchantID": "618bd6b3-b6b0-4984-b615-a8643c0f19c2",
+				"merchantName": "Vasamuseet"
+		   },
+			"salesPrice": 123456789.00,
+			"vatPercent": 25.00,
+			"vatAmount": 2.35,
+			"vatClass": "VAT1",
+			"currency": "SEK",
+			"salesPeriodStart": "2017-10-16T00:00:00Z",
+			"salesPeriodEnd": "2017-10-16T00:00:00Z"
+	   }
+   ],
+	"createdDate": "2017-10-16T14:05:36Z",
+	"updatedDate": "2017-10-16T15:18:12Z"
+}

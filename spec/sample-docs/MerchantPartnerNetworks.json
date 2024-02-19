@@ -1,0 +1,35 @@
+{
+	 "_id": "1bb58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "docType": "merchantPartnerNetworks",
+	 "partitionKey": "618bd6b3-b6b0-4984-b615-a8643c0f19c2",
+	 "merchantID": "618bd6b3-b6b0-4984-b615-a8643c0f19c2",
+	 "merchantName": "Vasamuseet",
+	 "partnerNetworkMemberships": [
+		{
+			 "partnerNetworkID": "474b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "partnerNetworkName": "Network 1",
+			 "roles": "admin"
+		},
+		{
+			 "partnerNetworkID": "574b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "partnerNetworkName": "Network 2",
+			 "roles": "member"
+		}
+	],
+	 "partnerNetworkInvites": [
+		{
+			 "partnerNetworkID": "674b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "partnerNetworkName": "Network 3",
+			 "roles": "member",
+			 "inviteExpiryDate": "2019-10-16T14:05:36Z"
+		},
+		{
+			 "partnerNetworkID": "774b917c-9971-4ec4-89b5-0ab80f2607ae",
+			 "partnerNetworkName": "Network 4",
+			 "roles": "member",
+			 "inviteExpiryDate": "2019-10-16T14:05:36Z"
+		}
+	],
+	 "createdDate": "2017-10-16T14:05:36Z",
+	 "updatedDate": "2017-10-16T15:18:12Z"
+}

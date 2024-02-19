@@ -1,0 +1,1015 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Vourity - Voucher API",
+    "version": "1.0.0"
+  },
+  "host": "voucherapi.vourity.com",
+  "basePath": "/api/v1",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/vouchers": {
+      "post": {
+        "operationId": "CreateVoucher",
+        "description": "Create voucher",
+        "summary": "Create voucher",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Voucher"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success operation"
+          }
+        },
+        "security": [
+          {
+            "apikeyQuery": []
+          }
+        ]
+      },
+      "get": {
+        "operationId": "GetVouchers",
+        "description": "Get one or more vouchers by passToken",
+        "summary": "Returns array of vouchers",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "passToken",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Pass token of the voucher",
+            "x-example": "$2a$05$4zfb41hRVgMURdvMjmhLze7Wmls7XsPsLuzhYl6wjQ/r77F2daPS6"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success operation",
+            "schema": {
+              "$ref": "#/definitions/Vouchers"
+            }
+          },
+          "400": {
+            "description": "Bad request. Missing passToken field from query params."
+          }
+        },
+        "security": [
+          {
+            "apikeyQuery": []
+          }
+        ]
+      }
+    },
+    "/move-voucher": {
+      "post": {
+        "operationId": "MoveVoucher",
+        "description": "Move Voucher",
+        "summary": "Move Voucher",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/MoveVoucher"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        },
+        "security": [
+          {
+            "apikeyQuery": []
+          }
+        ]
+      }
+    },
+    "/vouchers/redeem": {
+      "put": {
+        "operationId": "RedeemVoucher",
+        "description": "Validate redemption fields and redeem specified voucher.",
+        "summary": "Validate and redeem voucher",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "passToken",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Pass token of the voucher",
+            "x-example": "$2a$05$4zfb41hRVgMURdvMjmhLze7Wmls7XsPsLuzhYl6wjQ/r77F2daPS6"
+          },
+          {
+            "name": "voucherToken",
+            "in": "query",
+            "required": true,
+            "type": "string",
+            "description": "Voucher token of the voucher",
+            "x-example": "$2a$05$4zfb41hRVgMURdvMjmhLze7Wmls7XsPsLuzhYl6wjQ/r77F2daPS6"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/RedeemVoucher"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successfully redeemed the voucher"
+          },
+          "400": {
+            "description": "Field passToken is missing from request query params."
+          }
+        },
+        "security": [
+          {
+            "apikeyQuery": []
+          }
+        ]
+      }
+    },
+    "/vouchers/{id}": {
+      "get": {
+        "operationId": "Getvoucher",
+        "description": "Retrieve voucher by id",
+        "summary": "Returns voucher by id",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID of the voucher document",
+            "x-example": "5acd9d7282ee5452fc634593"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success operation",
+            "schema": {
+              "$ref": "#/definitions/Voucher"
+            }
+          },
+          "404": {
+            "description": "The specified voucher documentId doesn't exist or is invalid"
+          }
+        },
+        "security": [
+          {
+            "apikeyQuery": []
+          }
+        ]
+      },
+      "patch": {
+        "operationId": "Updatevoucher",
+        "description": "Update voucher properties by id",
+        "summary": "Update voucher by id",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID of the voucher document",
+            "x-example": "5acd9d7282ee5452fc634593"
+          },
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Voucher"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success operation"
+          },
+          "404": {
+            "description": "The specified voucher documentId doesn't exist or is invalid"
+          }
+        },
+        "security": [
+          {
+            "apikeyQuery": []
+          }
+        ]
+      },
+      "delete": {
+        "operationId": "Deletevoucher",
+        "description": "Delete voucher by id",
+        "summary": "Delete voucher by id",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string",
+            "description": "ID of the voucher document",
+            "x-example": "5acd9d7282ee5452fc634593"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success operation"
+          },
+          "404": {
+            "description": "The specified voucher documentId doesn't exist or is invalid"
+          }
+        },
+        "security": [
+          {
+            "apikeyQuery": []
+          }
+        ]
+      }
+    },
+    "/send-voucher": {
+      "post": {
+        "operationId": "SendVoucher",
+        "description": "Send Voucher",
+        "summary": "Send Voucher",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/SendVoucher"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        },
+        "security": [
+          {
+            "apikeyQuery": []
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "Voucher": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "docType": {
+          "type": "string"
+        },
+        "passToken": {
+          "type": "string"
+        },
+        "voucherToken": {
+          "type": "string"
+        },
+        "voucherTitle": {
+          "type": "string"
+        },
+        "voucherDescription": {
+          "type": "string"
+        },
+        "isRedeemed": {
+          "type": "boolean"
+        },
+        "isExpired": {
+          "type": "boolean"
+        },
+        "isCanceled": {
+          "type": "boolean"
+        },
+        "redemptionCounter": {
+          "type": "number"
+        },
+        "issuer": {
+          "required": [
+            "merchantID",
+            "merchantName"
+          ],
+          "properties": {
+            "merchantID": {
+              "type": "string"
+            },
+            "merchantName": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "productID": {
+          "type": "string"
+        },
+        "orderID": {
+          "type": "string"
+        },
+        "orderDate": {
+          "type": "string"
+        },
+        "salesPrice": {
+          "type": "number"
+        },
+        "vatPercent": {
+          "type": "number"
+        },
+        "vatAmount": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "settlementList": {
+          "required": [
+            "settlementCurrency",
+            "totalSettlementAmount",
+            "totalSettlementAmountLeft",
+            "settleFullAmountOnFirstRedemption",
+            "settlementAmountPerRedemption",
+            "settlementTransactions"
+          ],
+          "properties": {
+            "settlementCurrency": {
+              "type": "string"
+            },
+            "totalSettlementAmount": {
+              "type": "number"
+            },
+            "totalSettlementAmountLeft": {
+              "type": "number"
+            },
+            "settleFullAmountOnFirstRedemption": {
+              "type": "boolean"
+            },
+            "settlementAmountPerRedemption": {
+              "type": "number"
+            },
+            "settlementTransactions": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "merchantID": {
+                    "type": "string"
+                  },
+                  "merchantName": {
+                    "type": "string"
+                  },
+                  "merchantType": {
+                    "type": "string"
+                  },
+                  "settlementStatus": {
+                    "type": "string"
+                  },
+                  "settlementTransactionID": {
+                    "type": "string"
+                  },
+                  "settlementAmount": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          },
+          "type": "object"
+        },
+        "collectorLimitationsMerchants": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "merchantID": {
+                "type": "string"
+              },
+              "merchantName": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "collectorLimitationsBusinessUnits": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "businessUnitID": {
+                "type": "string"
+              },
+              "businessUnitName": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "collectorLimitationsPointOfService": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pointOfServiceID": {
+                "type": "string"
+              },
+              "pointOfServiceName": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "posProductLimitations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "posProductSKU": {
+                "type": "string"
+              },
+              "posProductEAN": {
+                "type": "string"
+              },
+              "productGCN": {
+                "type": "string"
+              },
+              "posProductName": {
+                "type": "string"
+              },
+              "posProductDescription": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "redemptionRules": {
+          "required": [
+            "redemptionCodeIsRequired",
+            "salesPersonCodeIsRequired",
+            "redemptionCodes"
+          ],
+          "properties": {
+            "redemptionCodeIsRequired": {
+              "type": "boolean"
+            },
+            "salesPersonCodeIsRequired": {
+              "type": "boolean"
+            },
+            "redemptionCodes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "type": "object"
+        },
+        "voucherValue": {
+          "required": [
+            "valueType",
+            "spend",
+            "redemptionsTotal",
+            "redemptionsLeft",
+            "fixedAmount",
+            "currency",
+            "ratioPercent"
+          ],
+          "properties": {
+            "valueType": {
+              "type": "string"
+            },
+            "spend": {
+              "type": "number"
+            },
+            "redemptionsTotal": {
+              "type": "number"
+            },
+            "redemptionsLeft": {
+              "type": "number"
+            },
+            "fixedAmount": {
+              "type": "number"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "ratioPercent": {
+              "type": "number"
+            }
+          },
+          "type": "object"
+        },
+        "validPeriod": {
+          "required": [
+            "validFromDate",
+            "validToDate",
+            "validDaysOfWeek",
+            "validFromTime",
+            "validToTime"
+          ],
+          "properties": {
+            "validFromDate": {
+              "type": "string"
+            },
+            "validToDate": {
+              "type": "string"
+            },
+            "validDaysOfWeek": {
+              "type": "string"
+            },
+            "validFromTime": {
+              "type": "string"
+            },
+            "validToTime": {
+              "type": "string"
+            }
+          },
+          "type": "object"
+        },
+        "conditions": {
+          "type": "string"
+        },
+        "campaignCode": {
+          "type": "string"
+        },
+        "imageURL": {
+          "type": "string"
+        },
+        "isLocked": {
+          "type": "boolean"
+        },
+        "voucherPinCode": {
+          "type": "string"
+        },
+        "voucherSequenceNumber": {
+          "type": "number"
+        },
+        "isRefundAllowed": {
+          "type": "boolean"
+        },
+        "createdDate": {
+          "type": "string"
+        },
+        "updatedDate": {
+          "type": "string"
+        }
+      }
+    },
+    "Vouchers": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "_id": {
+            "type": "string"
+          },
+          "docType": {
+            "type": "string"
+          },
+          "passToken": {
+            "type": "string"
+          },
+          "voucherToken": {
+            "type": "string"
+          },
+          "voucherTitle": {
+            "type": "string"
+          },
+          "voucherDescription": {
+            "type": "string"
+          },
+          "isRedeemed": {
+            "type": "boolean"
+          },
+          "isExpired": {
+            "type": "boolean"
+          },
+          "isCanceled": {
+            "type": "boolean"
+          },
+          "redemptionCounter": {
+            "type": "number"
+          },
+          "issuer": {
+            "required": [
+              "merchantID",
+              "merchantName"
+            ],
+            "properties": {
+              "merchantID": {
+                "type": "string"
+              },
+              "merchantName": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "productID": {
+            "type": "string"
+          },
+          "orderID": {
+            "type": "string"
+          },
+          "orderDate": {
+            "type": "string"
+          },
+          "salesPrice": {
+            "type": "number"
+          },
+          "vatPercent": {
+            "type": "number"
+          },
+          "vatAmount": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          },
+          "settlementList": {
+            "required": [
+              "settlementCurrency",
+              "totalSettlementAmount",
+              "totalSettlementAmountLeft",
+              "settleFullAmountOnFirstRedemption",
+              "settlementAmountPerRedemption",
+              "settlementTransactions"
+            ],
+            "properties": {
+              "settlementCurrency": {
+                "type": "string"
+              },
+              "totalSettlementAmount": {
+                "type": "number"
+              },
+              "totalSettlementAmountLeft": {
+                "type": "number"
+              },
+              "settleFullAmountOnFirstRedemption": {
+                "type": "boolean"
+              },
+              "settlementAmountPerRedemption": {
+                "type": "number"
+              },
+              "settlementTransactions": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "merchantID": {
+                      "type": "string"
+                    },
+                    "merchantName": {
+                      "type": "string"
+                    },
+                    "merchantType": {
+                      "type": "string"
+                    },
+                    "settlementStatus": {
+                      "type": "string"
+                    },
+                    "settlementTransactionID": {
+                      "type": "string"
+                    },
+                    "settlementAmount": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            },
+            "type": "object"
+          },
+          "collectorLimitationsMerchants": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "merchantID": {
+                  "type": "string"
+                },
+                "merchantName": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "collectorLimitationsBusinessUnits": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "businessUnitID": {
+                  "type": "string"
+                },
+                "businessUnitName": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "collectorLimitationsPointOfService": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "pointOfServiceID": {
+                  "type": "string"
+                },
+                "pointOfServiceName": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "posProductLimitations": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "posProductSKU": {
+                  "type": "string"
+                },
+                "posProductEAN": {
+                  "type": "string"
+                },
+                "productGCN": {
+                  "type": "string"
+                },
+                "posProductName": {
+                  "type": "string"
+                },
+                "posProductDescription": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "redemptionRules": {
+            "required": [
+              "redemptionCodeIsRequired",
+              "salesPersonCodeIsRequired",
+              "redemptionCodes"
+            ],
+            "properties": {
+              "redemptionCodeIsRequired": {
+                "type": "boolean"
+              },
+              "salesPersonCodeIsRequired": {
+                "type": "boolean"
+              },
+              "redemptionCodes": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "type": "object"
+          },
+          "voucherValue": {
+            "required": [
+              "valueType",
+              "spend",
+              "redemptionsTotal",
+              "redemptionsLeft",
+              "fixedAmount",
+              "currency",
+              "ratioPercent"
+            ],
+            "properties": {
+              "valueType": {
+                "type": "string"
+              },
+              "spend": {
+                "type": "number"
+              },
+              "redemptionsTotal": {
+                "type": "number"
+              },
+              "redemptionsLeft": {
+                "type": "number"
+              },
+              "fixedAmount": {
+                "type": "number"
+              },
+              "currency": {
+                "type": "string"
+              },
+              "ratioPercent": {
+                "type": "number"
+              }
+            },
+            "type": "object"
+          },
+          "validPeriod": {
+            "required": [
+              "validFromDate",
+              "validToDate",
+              "validDaysOfWeek",
+              "validFromTime",
+              "validToTime"
+            ],
+            "properties": {
+              "validFromDate": {
+                "type": "string"
+              },
+              "validToDate": {
+                "type": "string"
+              },
+              "validDaysOfWeek": {
+                "type": "string"
+              },
+              "validFromTime": {
+                "type": "string"
+              },
+              "validToTime": {
+                "type": "string"
+              }
+            },
+            "type": "object"
+          },
+          "conditions": {
+            "type": "string"
+          },
+          "campaignCode": {
+            "type": "string"
+          },
+          "imageURL": {
+            "type": "string"
+          },
+          "isLocked": {
+            "type": "boolean"
+          },
+          "voucherPinCode": {
+            "type": "string"
+          },
+          "voucherSequenceNumber": {
+            "type": "number"
+          },
+          "isRefundAllowed": {
+            "type": "boolean"
+          },
+          "createdDate": {
+            "type": "string"
+          },
+          "updatedDate": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "RedeemVoucher": {
+      "type": "object",
+      "properties": {
+        "_id": {
+          "type": "string"
+        },
+        "docType": {
+          "type": "string"
+        },
+        "passToken": {
+          "type": "string"
+        },
+        "voucherToken": {
+          "type": "string"
+        },
+        "redemptionsCount": {
+          "type": "number"
+        },
+        "fixedAmount": {
+          "type": "number"
+        },
+        "currency": {
+          "type": "string"
+        },
+        "redemptionCode": {
+          "type": "string"
+        },
+        "posProductSKU": {
+          "type": "string"
+        },
+        "posProductEAN": {
+          "type": "string"
+        },
+        "productGCN": {
+          "type": "string"
+        },
+        "merchantID": {
+          "type": "string"
+        },
+        "salesPersonCode": {
+          "type": "string"
+        },
+        "businessUnitID": {
+          "type": "string"
+        },
+        "pointOfServiceID": {
+          "type": "string"
+        },
+        "voucherPinCode": {
+          "type": "string"
+        }
+      }
+    },
+    "SendVoucher": {
+      "type": "object",
+      "properties": {
+        "fromWalletID": {
+          "type": "string"
+        },
+        "toWalletID": {
+          "type": "string"
+        },
+        "toEmail": {
+          "type": "string"
+        },
+        "voucherID": {
+          "type": "string"
+        }
+      }
+    },
+    "MoveVoucher": {
+      "type": "object",
+      "properties": {
+        "fromPassID": {
+          "type": "string"
+        },
+        "toPassID": {
+          "type": "string"
+        },
+        "voucherID": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "apikeyQuery": {
+      "type": "apiKey",
+      "name": "x-functions-key",
+      "in": "header"
+    }
+  }
+}

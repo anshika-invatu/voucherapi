@@ -1,0 +1,46 @@
+{
+    "name": "voucherapi",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "azure-functions-pack": "funcpack pack -c ./",
+        "lint": "eslint .",
+        "test": "mocha --exit --no-timeouts -r ./test.options.js */*.spec.js",
+        "test:watch": "chokidar '**/*.js' -c 'npm test'",
+        "test:debug": "mocha --inspect-brk=9230 --exit --no-timeouts -r ./test.options.js */*.spec.js",
+        "start:dev": "func host start -p 7073 -w node:debug=8073"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@bitbucket.org/vourity/voucherapi.git"
+    },
+    "keywords": [],
+    "author": "Harshith Kashyap <harshithkashyap@hotmail.com> (https://github.com/harshithkashyap)",
+    "homepage": "https://bitbucket.org/vourity/voucherapi#readme",
+    "dependencies": {
+        "@azure/service-bus": "^7.4.0",
+        "@azure/storage-blob": "^12.8.0",
+        "bluebird": "3.5.1",
+        "moment": "2.22.1",
+        "mongodb": "^6.3.0",
+        "nanoid": "^3.1.31",
+        "request": "^2.88.0",
+        "request-promise": "^4.2.6",
+        "sinon": "^7.5.0",
+        "uuid": "3.2.1",
+        "validator": "^13.7.0",
+        "xss": "^1.0.10"
+    },
+    "devDependencies": {
+        "azure-functions-pack": "1.0.0",
+        "chai": "4.1.2",
+        "chai-as-promised": "7.1.1",
+        "chokidar-cli": "1.2.0",
+        "dotenv": "5.0.1",
+        "eslint": "4.19.1",
+        "mocha": "5.1.0"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+      }
+}

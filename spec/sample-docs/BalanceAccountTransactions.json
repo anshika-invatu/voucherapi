@@ -1,0 +1,19 @@
+{
+	 "_id": "1bb58cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "docType": "balanceAccountTransactions",
+	 "partitionKey": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "transactionDate": "2018-05-12T00:00:000Z",
+	 "transactionStatus": "successful,failed,pending",
+	 "transactionType": "order,settlement,payout,adjustment,refund",
+	 "transferAmount": 1234567.98,
+	 "transferCurrency": "EUR",
+	 "fromBalanceAccountID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "toBalanceAccountID": "22358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+	 "references": {
+		 "voucherID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+		 "voucherPartitionKey": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6",
+		 "settlementTransactionID": "12358cfa-063d-4f5c-be5d-b90cfb64d1d6"
+	},
+	 "createdDate": "2018-10-16T14:05:36Z",
+	 "updatedDate": "2018-10-16T15:18:12Z"
+}
